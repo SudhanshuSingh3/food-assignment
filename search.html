@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <style>
+        body{
+            background-color: rgb(rgb(221, 126, 126), green, blue);
+        }
+      .dem{
+          color:brown;
+
+      }
+      .container{
+          
+        
+        border:8px dotted burlywood;
+        background-color: rgb(223, 159, 159);
+        padding:10px 15px;
+        margin:30px auto;
+        width:500px;
+  
+      }
+    </style>
+</head>
+<body>
+    <forms>
+       <div class="container">
+        <input type="text" placeholder="Enter restaurants" name="search" id="search">
+        <button type="button" onclick="Search()">Search</button>
+        <h2 class="dem" id="demo"> </h2>
+
+
+       </div>
+        
+    </forms>
+   <script>
+
+    var myarray=[{'rest':'arfaa kitchen'},{'rest':'vrindavan thali'},{'rest':'biryani junction'},{'rest':'marios'}]
+    function Search(){
+        var a=document.getElementById("search").value;
+        for(let i=0;i<myarray.length;i++){
+           var b=myarray[i].rest;
+           if(a==b){
+            document.getElementById("demo").innerHTML = 'Yes '+'you can order from '+a; 
+            break;
+           }
+           else{
+               document.getElementById("demo").innerHTML='sorry this restaurants is not present';
+           }
+    }
+    // <h2 id="demo"></h2>
+       
+}
+  </script>
+</body>
+</html>
