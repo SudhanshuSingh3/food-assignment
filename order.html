@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        body{
+            background-color: rgb(rgb(221, 126, 126), green, blue);
+        }
+      .dem{
+          color:#5e1a0b;
+
+      }
+      .container{
+          
+        
+        border:8px dotted burlywood;
+        background-color: rgb(223, 159, 159);
+        padding:10px 15px;
+        margin:30px auto;
+        width:500px;
+  
+      }
+    </style>
+</head>
+<body>
+    <form >
+        <div class="container">
+
+            <table>
+                <tr>
+                    <td>Sno.</td>
+                    <td>Food Item</td>
+                    <td>Quantity</td>
+                </tr>
+                
+                
+                <tr> 
+                    <td> 1:</td> 
+                    <td><label for="chicken">Chicken</label></td> 
+                    <td><input type="number"  id="q1" name="chicken"></td>
+                    <td>per 200rs</td>
+                </tr>   
+                
+                <tr> 
+                    <td>2:</td> 
+                    <td>Pizza</td> 
+                    <td><input type="number"  id="q2"></td>
+                    <td>per 120rs</td>
+                </tr> 
+                
+                <tr> 
+            <td>3:</td> 
+            <td>Water Bottle</td> 
+            <td><input type="number"  id="q3"></td>
+            <td>per 20rs</td>
+        </tr> 
+        
+        <tr> 
+            <td>4:</td> 
+            <td>Burger</td> 
+            <td><input type="number"  id="q4"></td>
+            <td>per 80rs</td>
+        </tr>
+        <tr>
+            <td></td> 
+            
+            <td><button type="button" onclick="order()">Order</button></td>
+            <td><input type="reset" class="button" value="Clear"></td>
+            
+        </tr> 
+        
+        
+    </table>
+    <h3 id="demo" class="dem"></h3>
+   </div>
+</form>
+
+        
+        <script>
+            var items={chicken:200,pizza:120,water_bottel:20,burger:80};
+            var total = 0;
+            function order(){
+             var e1 =document.getElementById("q1").value;
+             var e2=document.getElementById("q2").value;
+             var e3=document.getElementById("q3").value;
+             var e4=document.getElementById("q4").value;
+             total=e1*items.chicken+e2*items.pizza+e3*items.water_bottel+e4*items.burger;
+            console.log(total);
+             document.getElementById("demo").innerHTML = 'Thakyou for order '+'your grand total is: '+total;   
+            }
+             
+            
+
+        </script>
+</body>
+</html>
